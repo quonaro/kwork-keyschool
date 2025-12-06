@@ -92,6 +92,7 @@
 
 <script setup>
 import { ref, computed } from 'vue'
+import { getAssetPath } from '../utils/path'
 
 const props = defineProps({
   course: {
@@ -116,28 +117,28 @@ const paymentMethods = [
     name: 'Сбербанк',
     description: 'Карта, СБП',
     color: '#21A038',
-    logo: '/bank-logos/sberbank.jpg'
+    logo: getAssetPath('/bank-logos/sberbank.jpg')
   },
   {
     id: 'tinkoff',
     name: 'Т-Банк',
     description: 'Карта, СБП, QR-Code',
     color: '#FFDD2D',
-    logo: '/bank-logos/tinkoff.png'
+    logo: getAssetPath('/bank-logos/tinkoff.png')
   },
   {
     id: 'alfabank',
     name: 'Альфа-Банк',
     description: 'Карта, СБП',
     color: '#EF3124',
-    logo: '/bank-logos/alfabank.jpg'
+    logo: getAssetPath('/bank-logos/alfabank.jpg')
   },
   {
     id: 'installment',
     name: 'Рассрочка',
     description: 'Без переплаты',
     color: '#6366f1',
-    logo: '/bank-logos/installment.svg'
+    logo: getAssetPath('/bank-logos/installment.svg')
   }
 ]
 
