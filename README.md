@@ -6,6 +6,12 @@
 
 ⚠️ **Важно**: Заказчик, который попросил сделать этот лендинг, так и не ответил.
 
+## 🌐 Демо-версия
+
+🔗 **[Посмотреть демо-версию сайта](https://quonaro.github.io/kwork-keyschool/)**
+
+Или перейти к [репозиторию на GitHub](https://github.com/quonaro/kwork-keyschool)
+
 ## 🚀 Технологии
 
 - Vue.js 3 (Composition API)
