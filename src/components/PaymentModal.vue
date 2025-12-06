@@ -295,30 +295,32 @@ const resetPayment = () => {
 }
 
 .method-logo {
-  width: 80px;
-  height: 80px;
+  width: 56px;
+  height: 56px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 16px;
+  border-radius: 12px;
   overflow: hidden;
   transition: transform 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   background: white;
-  padding: 8px;
+  padding: 6px;
 }
 
 .method-card:hover .method-logo {
-  transform: scale(1.08) rotate(3deg);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .method-logo img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: 8px;
+  border-radius: 6px;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .method-info {
