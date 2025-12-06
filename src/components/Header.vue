@@ -4,7 +4,7 @@
     <div class="container">
       <nav class="nav">
         <router-link to="/" class="logo">
-          <img src="/3d-elements/Ключ прозрачный.png" alt="Ключ" class="logo-img" />
+          <img :src="getAssetPath('/3d-elements/Ключ прозрачный.png')" alt="Ключ" class="logo-img" />
           <span class="logo-text">Ключ</span>
         </router-link>
         <ul class="nav-menu" :class="{ active: menuOpen }">
@@ -56,7 +56,7 @@
       <template #header>
         <div class="modal-header">
           <div class="modal-icon">
-            <img src="/3d-elements/Ключ прозрачный.png" alt="Ключ" />
+            <img :src="getAssetPath('/3d-elements/Ключ прозрачный.png')" alt="Ключ" />
           </div>
           <div>
             <h2>Вход в личный кабинет</h2>
@@ -114,6 +114,7 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
+import { getAssetPath } from '../utils/path'
 
 const router = useRouter()
 const menuOpen = ref(false)

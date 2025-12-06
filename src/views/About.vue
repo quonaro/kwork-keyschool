@@ -10,8 +10,8 @@
       <div class="container">
         <div class="about-intro">
           <div class="about-visual">
-            <img src="/3d-elements/Ключ серебрянный.png" alt="Ключ" class="about-key" />
-            <img src="/3d-elements/Звезда.png" alt="Звезда" class="about-star" />
+            <img :src="getAssetPath('/3d-elements/Ключ серебрянный.png')" alt="Ключ" class="about-key" />
+            <img :src="getAssetPath('/3d-elements/Звезда.png')" alt="Звезда" class="about-star" />
           </div>
           <div class="about-text">
             <h2>История школы</h2>
@@ -26,7 +26,7 @@
             <Card class="fact-card">
               <template #header>
                 <div class="fact-icon">
-                  <img src="/3d-elements/Календарь.png" alt="Годы" />
+                  <img :src="getAssetPath('/3d-elements/Календарь.png')" alt="Годы" />
                 </div>
               </template>
               <template #title>Работаем 2 года</template>
@@ -38,7 +38,7 @@
             <Card class="fact-card">
               <template #header>
                 <div class="fact-icon">
-                  <img src="/3d-elements/Шляпа ученика.png" alt="Специалисты" />
+                  <img :src="getAssetPath('/3d-elements/Шляпа ученика.png')" alt="Специалисты" />
                 </div>
               </template>
               <template #title>Готовим профессионалов</template>
@@ -50,7 +50,7 @@
             <Card class="fact-card">
               <template #header>
                 <div class="fact-icon">
-                  <img src="/3d-elements/Лампочка.png" alt="Цель" />
+                  <img :src="getAssetPath('/3d-elements/Лампочка.png')" alt="Цель" />
                 </div>
               </template>
               <template #title>Наша цель</template>
@@ -67,7 +67,7 @@
             <Card class="value-card">
               <template #content>
                 <div class="value-item">
-                  <img src="/3d-elements/Ключ прозрачный.png" alt="Доступность" />
+                  <img :src="getAssetPath('/3d-elements/Ключ прозрачный.png')" alt="Доступность" />
                   <div>
                     <h3>Доступность</h3>
                     <p>Образование должно быть доступно каждому, независимо от места проживания и финансовых возможностей</p>
@@ -79,7 +79,7 @@
             <Card class="value-card">
               <template #content>
                 <div class="value-item">
-                  <img src="/3d-elements/Книги стопка.png" alt="Практичность" />
+                  <img :src="getAssetPath('/3d-elements/Книги стопка.png')" alt="Практичность" />
                   <div>
                     <h3>Практичность</h3>
                     <p>Мы фокусируемся на реальных навыках, которые можно применить в работе уже сегодня</p>
@@ -91,7 +91,7 @@
             <Card class="value-card">
               <template #content>
                 <div class="value-item">
-                  <img src="/3d-elements/Преподаватель женщина.png" alt="Поддержка" />
+                  <img :src="getAssetPath('/3d-elements/Преподаватель женщина.png')" alt="Поддержка" />
                   <div>
                     <h3>Поддержка</h3>
                     <p>Каждый студент получает персональную поддержку и обратную связь от опытных наставников</p>
@@ -106,7 +106,7 @@
           <template #content>
             <div class="director-content">
               <div class="director-image">
-                <img src="/3d-elements/Преподаватель мужчина.png" alt="Директор" />
+                <img :src="getAssetPath('/3d-elements/Преподаватель мужчина.png')" alt="Директор" />
               </div>
               <div class="director-info">
                 <Tag value="Руководитель школы" severity="info" />
@@ -127,6 +127,7 @@
 </template>
 
 <script setup>
+import { getAssetPath } from '../utils/path'
 </script>
 
 <style scoped>

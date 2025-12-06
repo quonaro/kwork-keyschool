@@ -7,17 +7,17 @@
         <div class="bg-gradient"></div>
         
         <!-- Фоновые элементы инфографики -->
-        <img src="/2d-infographics/обтекающие линии.png" alt="" class="bg-decoration bg-waves-1" />
-        <img src="/2d-infographics/обтекающие линии.png" alt="" class="bg-decoration bg-waves-2" />
-        <img src="/2d-infographics/звездочки.png" alt="" class="bg-stars bg-stars-1" />
-        <img src="/2d-infographics/звездочки.png" alt="" class="bg-stars bg-stars-2" />
-        <img src="/2d-infographics/звездочки.png" alt="" class="bg-stars bg-stars-3" />
-        <img src="/2d-infographics/звездочки линейные.png" alt="" class="bg-element bg-lines-1" />
-        <img src="/2d-infographics/звездочки линейные.png" alt="" class="bg-element bg-lines-2" />
-        <img src="/2d-infographics/фоновые линии клетки.png" alt="" class="bg-element bg-grid" />
-        <img src="/2d-infographics/Овал со звездами.png" alt="" class="bg-element bg-oval" />
-        <img src="/2d-infographics/инфографика со звездами.png" alt="" class="bg-element bg-infographic" />
-        <img src="/2d-infographics/линейная звезда.png" alt="" class="bg-element bg-star-line" />
+        <img :src="getAssetPath('/2d-infographics/обтекающие линии.png')" alt="" class="bg-decoration bg-waves-1" />
+        <img :src="getAssetPath('/2d-infographics/обтекающие линии.png')" alt="" class="bg-decoration bg-waves-2" />
+        <img :src="getAssetPath('/2d-infographics/звездочки.png')" alt="" class="bg-stars bg-stars-1" />
+        <img :src="getAssetPath('/2d-infographics/звездочки.png')" alt="" class="bg-stars bg-stars-2" />
+        <img :src="getAssetPath('/2d-infographics/звездочки.png')" alt="" class="bg-stars bg-stars-3" />
+        <img :src="getAssetPath('/2d-infographics/звездочки линейные.png')" alt="" class="bg-element bg-lines-1" />
+        <img :src="getAssetPath('/2d-infographics/звездочки линейные.png')" alt="" class="bg-element bg-lines-2" />
+        <img :src="getAssetPath('/2d-infographics/фоновые линии клетки.png')" alt="" class="bg-element bg-grid" />
+        <img :src="getAssetPath('/2d-infographics/Овал со звездами.png')" alt="" class="bg-element bg-oval" />
+        <img :src="getAssetPath('/2d-infographics/инфографика со звездами.png')" alt="" class="bg-element bg-infographic" />
+        <img :src="getAssetPath('/2d-infographics/линейная звезда.png')" alt="" class="bg-element bg-star-line" />
       </div>
       <div class="container">
         <div class="hero-content">
@@ -38,9 +38,9 @@
             </div>
           </div>
           <div class="hero-image">
-            <img src="/3d-elements/Ключ серебрянный.png" alt="Key" class="hero-key" />
-            <img src="/3d-elements/Книги стопка.png" alt="Books" class="hero-books" />
-            <img src="/3d-elements/Лампочка.png" alt="Idea" class="hero-lamp" />
+            <img :src="getAssetPath('/3d-elements/Ключ серебрянный.png')" alt="Key" class="hero-key" />
+            <img :src="getAssetPath('/3d-elements/Книги стопка.png')" alt="Books" class="hero-books" />
+            <img :src="getAssetPath('/3d-elements/Лампочка.png')" alt="Idea" class="hero-lamp" />
           </div>
         </div>
       </div>
@@ -188,6 +188,7 @@
 
 <script setup>
 import { ref, computed, inject, onMounted, onUnmounted, watch } from 'vue'
+import { getAssetPath } from '../utils/path'
 
 const openPayment = inject('openPayment')
 
@@ -266,13 +267,13 @@ const generateCourses = () => {
   }
 
   const courseImages = [
-    '/3d-elements/Книги стопка.png',
-    '/3d-elements/Книги и будильник.png',
-    '/3d-elements/Лампочка.png',
-    '/3d-elements/Шестеренка.png',
-    '/3d-elements/Ключ серебрянный.png',
-    '/3d-elements/Ключ фиолетовый.png',
-    '/3d-elements/Ключ прозрачный.png'
+    getAssetPath('/3d-elements/Книги стопка.png'),
+    getAssetPath('/3d-elements/Книги и будильник.png'),
+    getAssetPath('/3d-elements/Лампочка.png'),
+    getAssetPath('/3d-elements/Шестеренка.png'),
+    getAssetPath('/3d-elements/Ключ серебрянный.png'),
+    getAssetPath('/3d-elements/Ключ фиолетовый.png'),
+    getAssetPath('/3d-elements/Ключ прозрачный.png')
   ]
 
   const descriptions = [

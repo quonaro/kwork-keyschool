@@ -14,7 +14,7 @@
           <Card class="gift-card promo-card">
             <template #header>
               <div class="gift-icon">
-                <img src="/3d-elements/Ключ фиолетовый.png" alt="Промокод" />
+                <img :src="getAssetPath('/3d-elements/Ключ фиолетовый.png')" alt="Промокод" />
               </div>
             </template>
             <template #title>Промокоды</template>
@@ -41,7 +41,7 @@
           <Card class="gift-card discount-card">
             <template #header>
               <div class="gift-icon">
-                <img src="/3d-elements/Звезда.png" alt="Скидки" />
+                <img :src="getAssetPath('/3d-elements/Звезда.png')" alt="Скидки" />
               </div>
             </template>
             <template #title>Скидки на курсы</template>
@@ -68,7 +68,7 @@
           <Card class="gift-card friend-card">
             <template #header>
               <div class="gift-icon">
-                <img src="/3d-elements/Круг красивый.png" alt="Друзья" />
+                <img :src="getAssetPath('/3d-elements/Круг красивый.png')" alt="Друзья" />
               </div>
             </template>
             <template #title>Приведи друга</template>
@@ -111,6 +111,7 @@
 <script setup>
 import { ref } from 'vue'
 import { useToast } from 'primevue/usetoast'
+import { getAssetPath } from '../utils/path'
 
 const toast = useToast()
 

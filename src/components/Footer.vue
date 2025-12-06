@@ -4,7 +4,7 @@
       <div class="footer-content">
         <div class="footer-section">
           <div class="footer-logo">
-            <img src="/3d-elements/Ключ прозрачный.png" alt="Ключ" />
+            <img :src="getAssetPath('/3d-elements/Ключ прозрачный.png')" alt="Ключ" />
             <span>Онлайн-школа Ключ</span>
           </div>
           <p>Образовательная платформа нового поколения. Ключ к твоему успеху!</p>
@@ -34,7 +34,7 @@
           </ul>
           <div class="footer-social">
             <a href="#" class="social-link">
-              <img src="/3d-elements/Телеграм.png" alt="Telegram" />
+              <img :src="getAssetPath('/3d-elements/Телеграм.png')" alt="Telegram" />
             </a>
           </div>
         </div>
@@ -52,6 +52,7 @@
 </template>
 
 <script setup>
+import { getAssetPath } from '../utils/path'
 </script>
 
 <style scoped>
@@ -70,7 +71,7 @@
   left: 0;
   right: 0;
   height: 200px;
-  background-image: url('/2d-infographics/Линии разноцветные.png');
+  background-image: url('/kwork-keyschool/2d-infographics/Линии разноцветные.png');
   background-repeat: no-repeat;
   background-position: bottom;
   opacity: 0.1;

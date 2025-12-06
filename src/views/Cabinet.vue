@@ -49,7 +49,7 @@
             </template>
             <template #content>
               <div v-if="userCourses.length === 0" class="empty-state">
-                <img src="/3d-elements/Книги стопка.png" alt="Нет курсов" />
+                <img :src="getAssetPath('/3d-elements/Книги стопка.png')" alt="Нет курсов" />
                 <p>У вас пока нет активных курсов</p>
                 <router-link to="/">
                   <Button label="Выбрать курс" icon="pi pi-search" />
@@ -80,7 +80,7 @@
             </template>
             <template #content>
               <div class="empty-state">
-                <img src="/3d-elements/Шляпа ученика.png" alt="Нет сертификатов" />
+                <img :src="getAssetPath('/3d-elements/Шляпа ученика.png')" alt="Нет сертификатов" />
                 <p>У вас пока нет сертификатов</p>
                 <small>Получите сертификат после завершения курса</small>
               </div>
@@ -129,6 +129,7 @@
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useToast } from 'primevue/usetoast'
+import { getAssetPath } from '../utils/path'
 
 const router = useRouter()
 const toast = useToast()
